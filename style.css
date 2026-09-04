@@ -524,11 +524,17 @@ main{
     font-size:.96rem;
 }
 
+/* =========================================================
+   RESEARCH ARCHIVE LINKS — FIXED
+========================================================= */
+
 .spec-link{
 
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
+    display:block;
+
+    width:100%;
+
+    margin:0 0 12px 0;
 
     padding:15px 22px;
 
@@ -536,10 +542,14 @@ main{
 
     text-decoration:none;
 
+    text-align:left;
+
     color:var(--gold);
 
     font-size:1rem;
     font-weight:500;
+
+    line-height:1.5;
 
     background:
         rgba(255,255,255,0.03);
@@ -547,6 +557,11 @@ main{
     border:1px solid rgba(212,175,55,0.12);
 
     transition:.3s ease;
+}
+
+.spec-link:last-child{
+
+    margin-bottom:0;
 }
 
 .spec-link:hover{
@@ -988,11 +1003,20 @@ footer p{
 
     .spec-link{
 
+        display:block;
+
         width:100%;
+
+        margin:0 0 12px 0;
 
         text-align:center;
 
         word-break:break-word;
+    }
+
+    .spec-link:last-child{
+
+        margin-bottom:0;
     }
 
     footer{
@@ -1034,4 +1058,4 @@ footer p{
         transform:none !important;
     }
 
-              }
+             }
