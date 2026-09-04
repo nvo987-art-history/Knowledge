@@ -29,6 +29,7 @@
         0 10px 40px rgba(0,0,0,0.45);
 }
 
+
 /* =========================================================
    BASE
 ========================================================= */
@@ -43,13 +44,17 @@ body{
     font-family:'Inter',sans-serif;
 
     background:
-        radial-gradient(circle at top right,
-        rgba(212,175,55,0.08),
-        transparent 30%),
+        radial-gradient(
+            circle at top right,
+            rgba(212,175,55,0.08),
+            transparent 30%
+        ),
 
-        radial-gradient(circle at bottom left,
-        rgba(255,255,255,0.03),
-        transparent 25%),
+        radial-gradient(
+            circle at bottom left,
+            rgba(255,255,255,0.03),
+            transparent 25%
+        ),
 
         var(--bg);
 
@@ -60,6 +65,7 @@ body{
     -webkit-font-smoothing:antialiased;
     text-rendering:optimizeLegibility;
 }
+
 
 /* =========================================================
    NAVBAR
@@ -95,6 +101,7 @@ body{
     font-family:'Cormorant Garamond',serif;
 
     font-size:clamp(2rem,3vw,2.4rem);
+
     font-weight:700;
 
     color:var(--gold);
@@ -137,7 +144,7 @@ nav a::after{
     left:0;
     bottom:-7px;
 
-    width:0%;
+    width:0;
     height:1px;
 
     background:var(--gold);
@@ -154,6 +161,7 @@ nav a:hover::after{
 
     width:100%;
 }
+
 
 /* =========================================================
    HERO
@@ -218,6 +226,7 @@ nav a:hover::after{
     font-weight:400;
 }
 
+
 /* =========================================================
    HERO BUTTONS
 ========================================================= */
@@ -232,6 +241,7 @@ nav a:hover::after{
     gap:18px;
 }
 
+
 /* =========================================================
    BUTTONS
 ========================================================= */
@@ -239,6 +249,7 @@ nav a:hover::after{
 .btn{
 
     display:inline-flex;
+
     align-items:center;
     justify-content:center;
 
@@ -285,11 +296,13 @@ nav a:hover::after{
 
     transform:translateY(-4px);
 
-    border-color:rgba(212,175,55,0.25);
+    border-color:
+        rgba(212,175,55,0.25);
 
     background:
         rgba(255,255,255,0.06);
 }
+
 
 /* =========================================================
    MAIN
@@ -299,15 +312,17 @@ main{
 
     width:min(1240px,92%);
 
-    margin:auto;
+    margin:0 auto;
 
     display:flex;
+
     flex-direction:column;
 
     gap:48px;
 
     padding-bottom:140px;
 }
+
 
 /* =========================================================
    CARDS
@@ -317,15 +332,17 @@ main{
 
     position:relative;
 
+    width:100%;
+
     padding:64px;
 
     border-radius:var(--radius);
 
     background:
         linear-gradient(
-        180deg,
-        rgba(255,255,255,0.045),
-        rgba(255,255,255,0.025)
+            180deg,
+            rgba(255,255,255,0.045),
+            rgba(255,255,255,0.025)
         );
 
     border:1px solid var(--border);
@@ -346,9 +363,11 @@ main{
     inset:0;
 
     background:
-        radial-gradient(circle at top right,
-        rgba(212,175,55,0.06),
-        transparent 40%);
+        radial-gradient(
+            circle at top right,
+            rgba(212,175,55,0.06),
+            transparent 40%
+        );
 
     pointer-events:none;
 }
@@ -372,10 +391,12 @@ main{
     height:1px;
 
     background:
-        linear-gradient(to right,
-        transparent,
-        var(--gold),
-        transparent);
+        linear-gradient(
+            to right,
+            transparent,
+            var(--gold),
+            transparent
+        );
 }
 
 .glass-card h2{
@@ -401,6 +422,7 @@ main{
 
     max-width:980px;
 }
+
 
 /* =========================================================
    GRID
@@ -473,6 +495,7 @@ main{
     font-size:1.02rem;
 }
 
+
 /* =========================================================
    SPECIFICATION BOX
 ========================================================= */
@@ -494,6 +517,11 @@ main{
 .spec-block{
 
     margin-bottom:24px;
+}
+
+.spec-block:last-child{
+
+    margin-bottom:0;
 }
 
 .spec-label{
@@ -524,11 +552,12 @@ main{
     font-size:.96rem;
 }
 
+
 /* =========================================================
-   RESEARCH ARCHIVE LINKS — FIXED
+   RESEARCH ARCHIVES
 ========================================================= */
 
-.spec-link{
+.spec-block .spec-link{
 
     display:block;
 
@@ -542,29 +571,31 @@ main{
 
     text-decoration:none;
 
-    text-align:left;
-
     color:var(--gold);
 
     font-size:1rem;
+
     font-weight:500;
 
     line-height:1.5;
 
+    text-align:center;
+
     background:
         rgba(255,255,255,0.03);
 
-    border:1px solid rgba(212,175,55,0.12);
+    border:
+        1px solid rgba(212,175,55,0.12);
 
     transition:.3s ease;
 }
 
-.spec-link:last-child{
+.spec-block .spec-link:last-child{
 
     margin-bottom:0;
 }
 
-.spec-link:hover{
+.spec-block .spec-link:hover{
 
     transform:translateY(-2px);
 
@@ -578,11 +609,14 @@ main{
         0 8px 24px rgba(212,175,55,0.08);
 }
 
+
 /* =========================================================
    PREMIUM FOOTER
 ========================================================= */
 
 footer{
+
+    width:100%;
 
     margin-top:100px;
 
@@ -593,9 +627,9 @@ footer{
 
     background:
         linear-gradient(
-        to bottom,
-        rgba(255,255,255,0.01),
-        rgba(255,255,255,0.02)
+            to bottom,
+            rgba(255,255,255,0.01),
+            rgba(255,255,255,0.02)
         );
 }
 
@@ -603,15 +637,21 @@ footer{
 
     width:min(1100px,100%);
 
-    margin:auto;
+    margin:0 auto;
 
     text-align:center;
 
     display:flex;
+
     flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
 
     gap:30px;
 }
+
 
 /* =========================================================
    FOOTER LOGO
@@ -626,7 +666,12 @@ footer{
     color:var(--gold);
 
     letter-spacing:.03em;
+
+    text-align:center;
+
+    width:100%;
 }
+
 
 /* =========================================================
    DOMAIN LINKS
@@ -634,9 +679,14 @@ footer{
 
 .footer-links{
 
+    width:100%;
+
     display:flex;
 
     justify-content:center;
+
+    align-items:center;
+
     flex-wrap:wrap;
 
     gap:14px;
@@ -680,18 +730,24 @@ footer{
         0 8px 24px rgba(212,175,55,0.08);
 }
 
+
 /* =========================================================
-   FOOTER META
+   FOOTER META — CENTER FIX
 ========================================================= */
 
 .footer-meta{
+
+    width:100%;
 
     color:var(--text-dim);
 
     font-size:1rem;
 
     line-height:1.9;
+
+    text-align:center;
 }
+
 
 /* =========================================================
    EMAIL BOX
@@ -699,12 +755,15 @@ footer{
 
 .footer-email{
 
-    display:inline-flex;
+    display:flex;
 
     align-items:center;
     justify-content:center;
 
-    margin:auto;
+    width:100%;
+    max-width:100%;
+
+    margin:0 auto;
 
     padding:16px 26px;
 
@@ -715,13 +774,16 @@ footer{
     color:#fff;
 
     font-size:1.05rem;
+
     font-weight:500;
+
+    text-align:center;
 
     background:
         linear-gradient(
-        180deg,
-        rgba(255,255,255,0.04),
-        rgba(255,255,255,0.02)
+            180deg,
+            rgba(255,255,255,0.04),
+            rgba(255,255,255,0.02)
         );
 
     border:
@@ -747,18 +809,27 @@ footer{
         0 12px 32px rgba(212,175,55,0.12);
 }
 
+
 /* =========================================================
    FOOTER TEXT
 ========================================================= */
 
 footer p{
 
+    width:100%;
+
     color:var(--text-dim);
 
     line-height:2;
 
     font-size:1rem;
+
+    text-align:center;
+
+    margin-left:auto;
+    margin-right:auto;
 }
+
 
 /* =========================================================
    REVEAL
@@ -782,15 +853,18 @@ footer p{
     transform:translateY(0);
 }
 
+
 /* =========================================================
    SCROLLBAR
 ========================================================= */
 
 ::-webkit-scrollbar{
+
     width:10px;
 }
 
 ::-webkit-scrollbar-track{
+
     background:#090909;
 }
 
@@ -801,6 +875,7 @@ footer p{
 
     border-radius:20px;
 }
+
 
 /* =========================================================
    TABLET
@@ -860,10 +935,26 @@ footer p{
 
         padding:90px 5%;
     }
+
+    .footer-inner{
+
+        width:100%;
+
+        align-items:center;
+
+        text-align:center;
+    }
+
+    .footer-meta,
+    footer p{
+
+        text-align:center;
+    }
 }
 
+
 /* =========================================================
-   MOBILE FIX
+   MOBILE
 ========================================================= */
 
 @media(max-width:768px){
@@ -873,6 +964,7 @@ footer p{
         padding:18px 5%;
 
         flex-direction:column;
+
         align-items:flex-start;
 
         gap:16px;
@@ -889,6 +981,9 @@ footer p{
 
         font-size:.92rem;
     }
+
+
+    /* HERO */
 
     .hero{
 
@@ -917,6 +1012,9 @@ footer p{
         line-height:1.95;
     }
 
+
+    /* HERO BUTTONS */
+
     .hero-buttons{
 
         flex-direction:column;
@@ -931,14 +1029,24 @@ footer p{
         font-size:1rem;
     }
 
+
+    /* MAIN */
+
     main{
 
         width:94%;
 
+        margin:0 auto;
+
         gap:30px;
     }
 
+
+    /* CARDS */
+
     .glass-card{
+
+        width:100%;
 
         padding:36px 24px;
 
@@ -963,6 +1071,9 @@ footer p{
 
         line-height:1.95;
     }
+
+
+    /* GRID */
 
     .principles-grid{
 
@@ -991,7 +1102,12 @@ footer p{
         font-size:1rem;
     }
 
+
+    /* SPECIFICATION */
+
     .specification-box{
+
+        width:100%;
 
         padding:24px;
     }
@@ -1001,7 +1117,10 @@ footer p{
         font-size:.92rem;
     }
 
-    .spec-link{
+
+    /* ARCHIVE LINKS */
+
+    .spec-block .spec-link{
 
         display:block;
 
@@ -1009,32 +1128,73 @@ footer p{
 
         margin:0 0 12px 0;
 
+        padding:15px 16px;
+
         text-align:center;
+
+        line-height:1.45;
 
         word-break:break-word;
     }
 
-    .spec-link:last-child{
+    .spec-block .spec-link:last-child{
 
         margin-bottom:0;
     }
 
+
+    /* FOOTER */
+
     footer{
 
+        width:100%;
+
+        margin-top:80px;
+
         padding:80px 5%;
+
+        text-align:center;
     }
 
     .footer-inner{
 
+        width:100%;
+
+        margin:0 auto;
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        justify-content:center;
+
         gap:24px;
+
+        text-align:center;
     }
 
     .footer-inner h3{
 
+        width:100%;
+
         font-size:2.2rem;
+
+        text-align:center;
     }
 
     .footer-links{
+
+        width:100%;
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        justify-content:center;
 
         gap:10px;
     }
@@ -1042,14 +1202,39 @@ footer p{
     .footer-links a{
 
         width:100%;
+
+        text-align:center;
+    }
+
+    .footer-meta{
+
+        width:100%;
+
+        text-align:center;
+
+        margin:0 auto;
     }
 
     .footer-email{
 
         width:100%;
+
+        margin:0 auto;
+
+        text-align:center;
     }
 
-    /* ===== MOBILE REVEAL FIX ===== */
+    footer p{
+
+        width:100%;
+
+        text-align:center;
+
+        margin:0 auto;
+    }
+
+
+    /* MOBILE REVEAL FIX */
 
     .reveal{
 
@@ -1058,4 +1243,4 @@ footer p{
         transform:none !important;
     }
 
-             }
+   }
